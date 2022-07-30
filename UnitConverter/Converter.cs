@@ -63,6 +63,14 @@ namespace UnitConverter
             this.RegisterConverter(new CelsiusConverter());
             this.RegisterConverter(new FahrenheitConverter());
         }
+
+        /// <summary>
+        /// Converts one unit to another
+        /// </summary>
+        /// <param name="from">Source unit with required value</param>
+        /// <param name="to">Result unit</param>
+        /// <returns>Returns result of unit conversion</returns>
+        /// <exception cref="ArgumentException">Throws exception when conversion cannot be done</exception>
         public string Convert(string from, string to)
         {
             from = from.Trim().ToLower();

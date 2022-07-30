@@ -15,7 +15,13 @@ do
         continue;
     }
     var to = Console.ReadLine();
-    Console.WriteLine(convertor.Convert(from, to));
+    try
+    {
+        Console.WriteLine(convertor.Convert(from, to));
+    }
+    catch (ArgumentException e) {
+        Console.WriteLine($"And error occured: {e.Message}");
+    }
 }
 while (running);
 
